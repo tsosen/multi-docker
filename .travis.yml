@@ -3,7 +3,7 @@ services:
 before_install:
   - docker build -t tsosen/react-test -f ./client/Dockerfile.dev ./client
 script:
-  -docker run -e CI=true tsosen/react-test npm test
+  - docker run -e CI=true tsosen/react-test npm test
 after_success:
   - docker build -t tsosen/multi-client ./client
   - docker build -t tsosen/multi-nginx ./nginx

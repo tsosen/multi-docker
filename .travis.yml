@@ -13,6 +13,6 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push to hub
   - docker push tsosen/multi-client
-  - docker push tsosen/multi-nginx
-  - docker push tsosen/multi-server
-  - docker push tsosen/multi-worker
+  #- docker push tsosen/multi-nginx
+  #- docker push tsosen/multi-server
+  #- docker push tsosen/multi-worker
